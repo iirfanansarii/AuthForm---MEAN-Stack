@@ -1,0 +1,32 @@
+<div class="main-contaier">
+  <div id="signup-form">
+    <br />
+
+    <p>Email</p>
+    <input
+      #emailInput
+      class="details"
+      type="text"
+      name="user_name"
+      placeholder="Enter Your Email"
+    /><br /><br />
+    <p>Password</p>
+    <input
+      #passwordInput
+      class="details"
+      type="password"
+      placeholder="xxxxxx"
+    /><br />
+
+    <button class="submit" [routerLink]="['/sign-up']">SignUp</button>
+    <button
+      class="submit"
+      (click)="signIn($event, emailInput.value, passwordInput.value)"
+    >
+      SignIn
+    </button>
+    <br /><br />
+    <span class="err">{{ err }}</span>
+    <span class="success">{{ message }}</span>
+  </div>
+</div>
